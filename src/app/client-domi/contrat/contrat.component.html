@@ -1,0 +1,65 @@
+<div style="height: 700px;overflow: hidden;overflow-x:hidden">
+
+  
+  
+  <div class="row">
+   <span style="color: #495057;font-weight: 500;font-size:15px;position:relative;top:23px;left:30px;letter-spacing:1px;">MES CONTRATS</span>
+     <div class="col-md-12 text-right">
+         <form >
+
+           <input
+             matInput
+             class="search-input"
+             (keyup)="applyFilter($event)"
+             placeholder="Rechercher"
+             #input
+           >
+         </form> 
+       </div>
+     </div>
+     <div class="flexrow table-container" style="margin-left: 100px;margin-right: 80px;">
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  
+    
+    <!-- NomSoc Column -->
+    <ng-container matColumnDef="NomSoc">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th">Nom de société</th>
+      <td mat-cell *matCellDef="let element" class="td-Date"> {{element.nom_societe}} </td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="Type">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th">Type</th>
+      <td mat-cell *matCellDef="let element" class="td-Date"> {{element.type}} </td>
+    </ng-container>
+  
+    <!-- Date debut Column -->
+    <ng-container matColumnDef="DateDeb">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th" >Date Début</th>
+      <td mat-cell *matCellDef="let element" class="td-type"> {{element.date_deb}} </td>
+    </ng-container>
+
+    <!-- Date fin Column -->
+    <ng-container matColumnDef="DateFin">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th" >Date Fin</th>
+        <td mat-cell *matCellDef="let element" class="td-type"> {{element.date_fin}} </td>
+      </ng-container>
+    
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header id="" ></th>
+      <td mat-cell *matCellDef="let element" class="td-actions">
+        <button mat-icon-button class="detail-button" (click)="download(element)"><i style="color:white" class="pi pi-download download-icon"></i></button>
+        <button mat-icon-button class="delete-button"><i class="pi pi-trash delete-icon"></i></button>
+
+      </td>
+    </ng-container>
+  
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">Aucun résultat trouvé "{{input.value}}"</td>
+    </tr>
+  </table>

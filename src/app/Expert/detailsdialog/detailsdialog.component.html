@@ -1,0 +1,37 @@
+<form  [formGroup]="registerForm" (ngSubmit)="addbutton(registerForm.value)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Nom</label>
+        <input type="text" class="form-control"placeholder="{{data.nom}}" readonly>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Prenom</label>
+        <input type="text" class="form-control" placeholder="{{data.prenom}} " readonly>
+      </div>
+    </div>
+
+    
+    <div class="form-row">
+      <div class="form-group col-md-7">
+        <label for="formGroupExampleInput">Email</label>
+        <input type="text" class="form-control"placeholder="{{data.email}}" readonly>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="formGroupExampleInput">Type</label>
+        <input type="text" class="form-control" placeholder="{{data.Type}} " readonly>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="resize: none;">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="{{data.description}} " readonly></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="resize: none;">Réponse</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Ecrivez votre réponse ici" formControlName="reponse"></textarea>
+      </div>  
+      
+    <button [mat-dialog-close]="true"type="submit" class="btn btn-primary"  style="position: relative;left:160px;">Envoyer</button>
+     
+  </form>
+

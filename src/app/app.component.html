@@ -1,0 +1,300 @@
+
+<div > 
+  <mat-toolbar class="header shadow-lg " *ngIf="loggedin"   >
+    <button
+    *ngIf="loggedin"
+    style="margin-left: -12px"
+    class="txtcolor"
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+  >
+    <mat-icon aria-label=" nav toggle icon">menu</mat-icon>
+  </button>
+    <span class="example-spacer"></span>
+    <div class="icons"X>
+             
+             
+             <button mat-icon-button *ngIf="loggedin">
+               <mat-icon class="top-icons" routerLink="/CompteClient" >settings</mat-icon>
+             </button>
+         
+             <button mat-button [matMenuTriggerFor]="menu" *ngIf="loggedin" >
+                 <mat-icon class="top-icons">person</mat-icon>
+             </button>
+  
+             <mat-menu #menu="matMenu" >
+                 <button mat-menu-item (click)='logout()'>
+                     <mat-icon>exit_to_app</mat-icon>
+                     Sign out
+                 </button>
+                 
+             </mat-menu>
+      
+   </div>
+  
+  
+  
+  
+  </mat-toolbar>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  <div style="overflow:hidden;">
+      
+    <mat-sidenav-container>
+      <mat-sidenav
+        #drawer
+        [opened]="loggedin && !hidesidebar"
+        closed
+        mode="side"
+        class="sidenav sidebarcolor"
+        fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      >
+  
+   <div class="text-center">
+        
+        <img class="ProfImg" src="https://www.w3schools.com/howto/img_avatar.png" alt="Bassma Yaacoubi">
+        
+      </div>  
+  
+  
+        <h1 class="txtcolor"> </h1>
+
+
+        <mat-nav-list *ngIf="admin">
+        
+          <a mat-list-item routerLink='/home'>
+            <i class="bi bi-grid iconNav"></i>
+            <p class="text-nav">Dashboard</p></a>
+          <a mat-list-item routerLink='/membres'>
+            <i class="bi bi-people iconNav"></i>
+            <p class="text-nav">Membres</p></a>
+          <a mat-list-item routerLink='/factures'>
+            <i class="bi bi-credit-card iconNav"></i>
+            <p class="text-nav">Factures</p></a>
+          
+            <a mat-list-item routerLink='/services'>
+            <i class="bi bi-box iconNav"></i>
+            <p class="text-nav">Services</p></a>
+          <a mat-list-item routerLink='/calendrier'>
+            <i class="bi bi-calendar-event iconNav"></i>
+            <p class="text-nav">Calendrier</p></a> 
+          <a mat-list-item routerLink='/Tuto'>
+            <i class="bi bi-collection-play iconNav"></i><p class="text-nav">Tutos</p></a>
+          <a mat-list-item routerLink='/ContratAdmin'>
+            <i class="bi bi-files iconNav"></i><p class="text-nav">Contrats</p></a>
+          <a mat-list-item routerLink='/CourrierUploadMain'>
+              <i class="bi bi-mailbox iconNav"></i><p class="text-nav">Courriers</p></a>
+        </mat-nav-list>
+<!--
+        <mat-nav-list *ngIf="admin">
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/dashboard">
+            <mat-icon class="txtcolor sideicon">dashboard</mat-icon> Tableau de
+            bord
+          </a>
+  
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/clients">
+            <mat-icon class="txtcolor sideicon">groups</mat-icon>Clients
+          </a>
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/reservations">
+            <mat-icon class="txtcolor sideicon">today</mat-icon>Réservations
+          </a>
+  
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/calendrier">
+            <mat-icon class="txtcolor sideicon">calendar_today</mat-icon
+            >Calendrier
+          </a>
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/factures">
+            <mat-icon class="txtcolor sideicon">credit_card</mat-icon>
+            Factures
+          </a>
+          <mat-divider></mat-divider>
+          <a class="txtcolor" mat-list-item routerLink="/contrats">
+            <mat-icon class="txtcolor sideicon">notes</mat-icon>Contrats
+          </a>
+          <mat-divider></mat-divider>
+  
+          <a class="txtcolor" mat-list-item routerLink="/partenaires">
+            <mat-icon class="txtcolor sideicon">group</mat-icon>Partenaires
+          </a>
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+      -->
+
+      <mat-nav-list *ngIf="client">
+          
+        <a mat-list-item routerLink="/HomeClientDomiciliation" style="margin-bottom:7px;">
+          <i class="bi bi-house iconNav"></i><p class="text-nav">Accueil</p></a>
+
+
+
+          <a mat-list-item routerLink="/courr" style="margin-bottom:7px;">
+            <i class="bi bi-card-list iconNav"></i><p class="text-nav">Mes courriers</p></a>
+
+
+
+
+          
+        <a mat-list-item style="margin-bottom:7px;" routerLink="/Courriers">
+          <i class="bi bi-mailbox iconNav"></i><p class="text-nav">Mes Factures</p></a>
+        <a mat-list-item style="margin-bottom:7px;" routerLink="/Contrat">
+          <i class="bi bi-layout-text-sidebar iconNav"></i><p class="text-nav">Mon contrat</p></a>
+          <a mat-list-item routerLink="/secretariat">
+            <i class="bi bi-headset iconNav"></i>
+            <p class="text-nav">Secretariat</p>
+            </a>
+           <a mat-list-item  routerLink="/assistanceComp">
+            <i class="bi bi-chat-square iconNav"></i>
+            <p class="text-nav">Assistance comptable</p>
+          </a>  
+           <a mat-list-item  routerLink="/conference">
+            <i class="bi bi-camera-video iconNav"></i>
+            <p class="text-nav">Conférence en ligne</p>
+          </a> 
+
+          <a  mat-list-item  routerLink="/tutoriel">
+            <i class="bi bi-skip-end-btn iconNav"></i>
+            <p class="text-nav">Tutoriel</p></a>
+      <!--
+          <mat-sidenav-container class="example-container">
+            <mat-sidenav #sidenav mode="side" [(opened)]="client" [mode]="mode.value" class="example-container" style="width:200px;">
+              <a routerLink="/secretariat"><span class="text-nav2">Secretariat</span></a><br><br>
+              <a routerLink="/assistanceComp"><span class="text-nav2">Assistance comptable</span></a><br><br>
+              <a routerLink="/conference"><span class="text-nav2">Conférence en ligne</span></a><br><br>
+              <a routerLink="/tutoriel"><span class="text-nav2">Tutoriel</span></a><br>
+            </mat-sidenav>
+          
+            <mat-sidenav-content  style="height:200px;background-color: #536dfe;" >
+            
+              <a mat-list-item style="margin-bottom:7px;" routerLink="/Contrat" (click)="sidenav.toggle()">
+                <i class="bi bi-box iconNav"></i><p class="text-nav">Mes services</p></a>
+        
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+-->
+  
+      </mat-nav-list>
+
+      <mat-nav-list *ngIf="expert">
+        
+        <a mat-list-item routerLink='/devis'>
+          <i class="bi bi-cash iconNav"></i>
+          <p class="text-nav">Devis</p></a>
+        <a mat-list-item routerLink='/faq'>
+          <i class="bi bi-patch-question iconNav"></i>
+          <p class="text-nav">F.A.Q</p></a>
+      </mat-nav-list>
+
+
+
+<!--
+        <mat-nav-list *ngIf="client" >
+          <mat-divider style=""></mat-divider>
+          <a class="txtcolor" style="height: 60px;margin-top:100px" mat-list-item routerLink="/accueil">
+            <mat-icon class="txtcolor sideicon"> home </mat-icon>Acceuil
+          </a>
+          <mat-divider></mat-divider>
+          <a class="txtcolor" style="height: 60px;"  mat-list-item routerLink="/calendrierclient">
+            <mat-icon class="txtcolor sideicon">calendar_today</mat-icon
+            >Mes courriers
+          </a>
+          <mat-divider></mat-divider>
+  
+          <a class="txtcolor"  style="height: 60px;" mat-list-item routerLink="/demanderreservation">
+            <mat-icon class="txtcolor sideicon">today</mat-icon>Résérver
+          </a>
+  
+  
+          <mat-divider></mat-divider>
+          <a class="txtcolor" style="height: 60px;"  mat-list-item routerLink="/historique">
+            <mat-icon class="txtcolor sideicon">history</mat-icon>
+            Historique
+          </a>
+          <mat-divider></mat-divider>
+          <a class="txtcolor" style="height: 60px;"  mat-list-item routerLink="/demandercontrat">
+            <mat-icon class="txtcolor sideicon">notes</mat-icon>Contrat
+          </a>
+  
+          <mat-divider></mat-divider>
+        </mat-nav-list>
+        -->
+      </mat-sidenav>
+     
+      
+      <router-outlet style="background-color: white;"></router-outlet>
+    </mat-sidenav-container>
+      
+  
+  
+
+
+</div> 
+
+<!--
+<div style="overflow:hidden;">
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #drawer mode="side" [opened]="loggedin" class="sidenav" fixedInViewport="true"
+  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      >
+          <img class="ProfImg" src="/assets/images/avatar.png" alt="Bassma Yaacoubi">  
+    <div class="navList">
+      <mat-nav-list>
+        
+      <a mat-list-item routerLink="/HomeClientDomiciliation" style="margin-bottom:7px;">
+        <mat-icon class="iconNav">home</mat-icon><p class="text-nav">Accueil</p></a>
+      <a mat-list-item style="margin-bottom:7px;" routerLink="/Courriers">
+        <mat-icon class="iconNav"><span class="material-icons-outlined">markunread_mailbox</span></mat-icon><p class="text-nav">Mes courriers</p></a>
+      <a mat-list-item style="margin-bottom:7px;" routerLink="/Contrat">
+        <mat-icon class="iconNav"><span class="material-icons-outlined">assignment </span></mat-icon><p class="text-nav">Mon contrat</p></a>
+    
+        <mat-sidenav-container class="example-container">
+          <mat-sidenav #sidenav mode="side" [(opened)]="client"  class="example-container" style="width:200px;">
+            <a routerLink="/secretariat"><span class="text-nav2">Secretariat</span></a><br><br>
+            <a routerLink="/assistanceComp"><span class="text-nav2">Assistance comptable</span></a><br><br>
+            <a routerLink="/conference"><span class="text-nav2">Conférence en ligne</span></a><br><br>
+            <a routerLink="/tutoriel"><span class="text-nav2">Tutoriel</span></a><br>
+          </mat-sidenav>
+        
+          <mat-sidenav-content  style="height:200px;background-color: #536dfe;" >
+          
+            <a mat-list-item style="margin-bottom:7px;" routerLink="/Contrat" (click)="sidenav.toggle()">
+              <mat-icon class="iconNav"> layers</mat-icon><p class="text-nav">Mes services</p></a>
+      
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+
+
+    </mat-nav-list>
+  </div>
+  </mat-sidenav>
+  
+  <mat-sidenav-content style="height:800px;">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+</div> 
+-->

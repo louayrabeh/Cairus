@@ -1,0 +1,105 @@
+
+
+
+<div class="cards row mt-5" >
+
+<mat-card class="card1 col ml-5">
+  <mat-card-content>
+    <mat-icon class="card-icon">person</mat-icon>
+    <p class="card-num">{{ moismembre }}</p>    
+  </mat-card-content>
+  <p class="card-content text-center">Nouveaux membres</p>
+</mat-card>
+
+
+<mat-card class="card2 col">
+  <mat-card-content>
+  <mat-icon class="card-icon">people</mat-icon>
+  <p class="card-num">{{ totalmembre }}</p>
+   </mat-card-content>
+   <p class="card-content text-center">Membres</p>
+</mat-card>
+
+
+<mat-card class="card3 col">
+  <mat-card-content>
+  <mat-icon class="card-icon">home</mat-icon>
+    <p class="card-num">{{domi}}</p>
+  </mat-card-content>
+    <p class="card-content">Nombre de domicliation</p>
+  
+  
+</mat-card>
+
+<mat-card class="card4 col mr-5 ">
+  <mat-card-content>
+  <mat-icon class="card-icon">business</mat-icon>
+    <p class="card-num">{{creation}}</p>
+  </mat-card-content>
+    <p class="card-content">Entreprises créées</p>    
+ 
+</mat-card>
+
+
+</div>
+
+<div class="row mt-5">
+  <div class="col ml-5">
+   <mat-card class="card5">
+  <mat-card-content class="card-column">
+    <p class="title">Nouveaux membres par mois</p>
+    <app-column></app-column>
+  </mat-card-content>
+</mat-card>
+</div>
+
+<div class="col">
+<mat-card class="card6">
+  <mat-card-content class="card-column2">
+    <p class="title">Chiffre d'affaires par mois</p>
+    <app-column2></app-column2>
+  </mat-card-content>
+</mat-card>
+</div>
+<div class="col">
+<mat-card class="card9"> 
+  <mat-card-content class="card-pie">
+    <p class="title">Domiciliation par pack</p>
+    <app-pie></app-pie>
+  </mat-card-content>
+</mat-card>
+</div>
+</div>
+
+<div class="row">
+<mat-card class="card7 col-7 ml-5">
+  <mat-card-content class="card-area" >
+    <p class="title">Domiciliation par mois</p>
+    <app-area></app-area>
+  </mat-card-content>
+</mat-card>
+    
+          
+<mat-card class="card8 col-3 mr-5" style="padding-right:10px!important;">
+  <mat-card-content class="card-bar">
+    <p class="title">Entreprises par mois</p>
+    <app-line></app-line>
+  </mat-card-content>
+  
+</mat-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

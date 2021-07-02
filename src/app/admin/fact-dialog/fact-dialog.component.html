@@ -1,0 +1,74 @@
+<div class="text-right">
+<button mat-button style="top:-24px;right:-24px"class="close-icon" [mat-dialog-close]="true">
+    <i class="pi pi-times"></i>
+</button>
+</div>
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Nom</label>
+        <input type="text" class="form-control"placeholder="Nom">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Prénom</label>
+        <input type="text" class="form-control" placeholder="Prenom ">
+      </div>
+    </div>
+
+    
+    <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>Référence</label>
+          <input class="form-control" placeholder="Référence">
+        </div>
+        <div class="form-group col-md-4">
+          <label>Référence contrat</label>
+          <input type="text" class="form-control" placeholder="Référence contrat">
+        </div>
+        <div class="form-group col-md-4">
+            
+            <label for="formGroupExampleInput">Date</label>
+      
+        <input type="text"
+        placeholder="Date"
+        class="form-control"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true }">  
+    </div>       
+      </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label >PU HT</label>
+        <input type="text" class="form-control" placeholder="PU HT">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Quantité</label>
+        <input type="text" class="form-control" placeholder="Quantité">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Montant HT</label>
+        <input type="text" class="form-control"placeholder="Montant HT" >
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+          <label >Taux TVA</label>
+          <input type="text" class="form-control" placeholder="Taux TVA">
+        </div>
+        <div class="form-group col-md-4">
+          <label>TVA à 19%</label>
+          <input type="text" class="form-control" placeholder="TVA à 19%">
+        </div>
+        <div class="form-group col-md-4">
+            <label>Droit de timbre</label>
+            <input type="text" class="form-control" placeholder="Droit de timbre">
+          </div>
+      </div>
+
+  <div class="text-center">
+    <button [mat-dialog-close]="true" type="submit" class="btn btn-primary" (click)="FactureAlert()" >Enregistrer</button>
+  </div>   
+  </form>
+

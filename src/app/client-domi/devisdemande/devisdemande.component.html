@@ -1,0 +1,31 @@
+<div class='overfloww'>
+<form [formGroup]="registerForm" (ngSubmit)="addbutton(registerForm.value)">
+    <div class="form-row">
+      <div class="form-group col-md-">
+        <label for="formGroupExampleInput">Nom</label>
+        <input type="text" class="form-control"placeholder="{{shell.nom}}" formControlName="nom" readonly  >
+      </div>
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Prenom</label>
+        <input type="text" class="form-control" placeholder="{{shell.prenom}}" formControlName="prenom" readonly>
+      </div>
+    </div>
+
+    
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control"placeholder="{{shell.email}}" formControlName="email" readonly>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="resize:none;">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"   placeholder="Description" formControlName="description"></textarea>
+      </div>
+      
+    <button [mat-dialog-close]="true" type="submit"  class="btn btn-primary text-center" style="margin-left:150px;"  >Envoyer</button>
+     
+  </form>
+
+</div>

@@ -1,0 +1,90 @@
+.sidenav-container {
+  height: 100%;
+  background: #edf5f8
+  
+}
+
+.sidenav {  
+  
+  width: 13%;
+  background:
+  #06163a
+  
+}
+
+.ProfImg{
+  width:75%;
+  
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top:50px;
+  margin-bottom:50px;
+ }
+.Profile-card{
+  text-align:center;
+ color:white;
+ 
+}
+.iconNav{
+margin-left:5px;
+margin-right:10px;
+color:white;
+font-size:16px;
+}
+.header{
+  background:#ffffff ;
+  
+}
+
+.text-nav{
+  color:white;
+  margin-top:13px;
+  font-family: Open Sans,sans-serif;
+
+}
+
+.top-icons{
+  color:#b3b4b4;
+  font-size:20px;
+}
+
+.mat-divider {
+  border-top-color: rgb(77, 76, 76);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+a:focus{
+  background:#5662a8!important;
+  border-left:2px solid white!important;
+}
+a:active{
+  background:#5662a8!important;
+  border-left:2px solid white!important;
+}
+
+/*.contact-icons{
+  color:white;
+}
+
+.footer-{
+  background-color:#dd9206 !important;
+}
+
+.social-position{
+  position:relative;
+  left:700px;
+}
+.social-size{
+  height:30px;
+  width: 30px;
+}
+
+.contact{
+  position:fixed;
+  top:650px;
+  color:white;
+  left:90px;
+}*/
+
+

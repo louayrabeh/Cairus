@@ -1,0 +1,270 @@
+<div class="header" >
+  <img src="/assets/images/logoStepper.png" alt="LogoStepper" class="logo">
+  <div class="text-right nom">
+      <i class="bi bi-person" style="color: rgb(21, 118, 225);font-size:20px;"></i>
+{{NomPrenom}} </div>
+</div>
+
+ 
+<mat-horizontal-stepper labelPosition="bottom" style="width:100%;margin-top:10px;background-color: #f5fbff;"linear #stepper >
+  <mat-step label="Choix d'un Pack" style="color:#e2e4e6;background:#00C794;">
+        <ng-template matStepperIcon="edit"><mat-icon>done</mat-icon></ng-template>
+        <section id="pricing" class="section">
+          <div class="container">
+            <!-- Start Row -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="pricing-text section-header text-center">  
+                  <div class="section-title"> 
+                   <h2>Nos Packs</h2>  
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+            <!-- End Row -->
+            <!-- Start Row -->
+            <div class="row pricing-tables">
+             <!--  Start Col -->
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table text-center">
+                  <div class="pricing-details">
+                    <h3>Domisimple</h3>
+                    <h1>39 DT<span></span></h1>
+                    <ul>
+                      <li>Domiciliation commerciale</li>
+                      <li>Réception et tri du factures </li>
+                      <li>Notification de courrier</li>
+                      <li>Scan de l’enveloppe *</li>
+                    </ul>
+                  </div>
+                  <div class="plan-button">
+                    <button matStepperNext class="btn btn-border">
+                   Choisir
+              
+                    </button>
+                   
+                  </div>
+                </div>
+              </div>
+               <!--  End Col -->
+             <!--  Start Col -->
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table text-center">
+                  <div class="pricing-details">
+                    <h3>standard</h3>
+                    <h1><span></span>59 DT</h1>
+                    <ul>
+                      <li>Domiciliation commerciale</li>
+                      <li>Réception et tri du Factures </li>
+                      <li>Notification de courrier</li>
+                      <li>Scan de l’enveloppe</li>
+                      <li>Réexpédition de factures (timbres inclus)</li>
+                                        
+                    </ul>
+                  </div>
+                  <div class="plan-button">
+                    <button matStepperNext class="btn btn-common">
+                                        Choisir
+                  </button>
+                  </div>
+                </div>
+              </div>
+               <!--  End Col -->
+             <!--  Start Col -->
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="pricing-table text-center">
+                  <div class="pricing-details">
+                    <h3>Business</h3>
+                    <h1><span></span>79 DT</h1>
+                    <ul>
+                      <li>Domiciliation commerciale</li>
+                      <li>Réception et tri du factures</li>
+                      <li>Notification de factures</li>
+                      <li>Scan de l’enveloppe</li>
+                      <li>Scan du contenu</li>
+                    </ul>
+                  </div>
+                  <div class="plan-button">
+                    <button matStepperNext class="btn btn-border">
+                    Choisir
+                    </button>
+                  </div>
+                </div>
+              </div>
+               <!--  End Col -->
+    
+            </div>
+            <!-- End Row -->
+          </div>
+        </section>
+        <!-- Our Pricing Plan Section End --> 
+
+  
+    </mat-step>
+
+
+    <mat-step [stepControl]="firstFormGroup">
+          <ng-template matStepLabel>Informations société</ng-template>
+         
+          <form  [formGroup]="firstFormGroup" style="margin-left:100px;margin-top:45px;">
+            <div class="row">
+            <h2 style="color:#3C345A;font: normal normal bold 28px/37px PT Serif;">C’est parti</h2>
+          </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="labels"> Forme juridique</label>
+                <select class="selectpicker form-control" formControlName="forme_juridique" required
+                >
+                  <option>EIRL</option>
+                  <option>SARL</option>
+                  <option>EURL</option>
+                  <option>SAS</option>
+                  <option>SASU</option>
+                  <option>SCI</option>
+                  <option>SASU</option>
+                  <option>SNC</option>
+                  <option>Auto-entrepreneur</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label class="labels">Nom de votre entreprise</label>
+                <input  type="text" class="form-control" formControlName="nom_entreprise" required
+                [ngClass]="{ 'is-invalid': f.nom_entreprise.errors }">
+              
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="labels">Résidence fiscale</label>
+                <input type="text" class="form-control" formControlName="residence" 
+                required [ngClass]="{ 'is-invalid': f.residence.errors }">
+               
+              </div>
+              <div class="form-group col-md-4">
+                <label class="labels">Résidente</label>
+                <input type="text" class="form-control" formControlName="residente"
+                required [ngClass]="{ 'is-invalid': f.residente.errors }">
+                
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label class="labels">Capital social</label>
+                <input type="text" class="form-control" formControlName="capital"
+                required [ngClass]="{ 'is-invalid': f.capital.errors }">
+               
+              </div>
+
+              <div class="form-group col-md-4">
+                <label class="labels">Activité</label>
+                <input type="text" class="form-control" formControlName="activite"
+                required [ngClass]="{ 'is-invalid': f.activite.errors }">
+  
+              </div>
+            </div> 
+          </form>
+
+          <div class="text-center" style="margin-top: 30px;">
+            <button  class="btn" style="background-color:#00C794;color:white;" matStepperPrevious>
+              <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+            <button class="btn btn-lg" style="background-color:#00C794;color:white;margin-left:20px;" matStepperNext >Etape suivante</button>
+          </div>
+      </mat-step>
+
+
+
+
+
+
+      <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel>Informations dirigeant</ng-template>
+        <form style="margin-left:100px;margin-top:45px;" [formGroup]="secondFormGroup">
+          <div class="row">
+          <h2 style="color:#3C345A;font: normal normal bold 28px/37px PT Serif;">Identité du gérant</h2>
+          </div>  
+          <div class="row" style="margin-bottom:50px;">
+            <div class="form-check col-md-3">
+              <select class="selectpicker form-control" formControlName="sexe" required
+                >
+                  <option>Monsieur</option>
+                  <option>Madame</option>
+                  
+                
+                </select>
+              
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+            <label class="labels">Adresse</label>
+            <input type="text" class="form-control" id="inputAddress"
+            formControlName="adresse"
+                required [ngClass]="{ 'is-invalid': ff.adresse.errors }">
+            </div>    
+            <div class="form-group col-md-3">
+              <label class="labels">Ville</label>
+              <input type="text" class="form-control" id="inputCity" 
+              formControlName="ville"
+                required [ngClass]="{ 'is-invalid': ff.ville.errors }">
+            </div>
+            <div class="form-group col-md-3">
+              <label class="labels">Gouvernorat</label>
+              <input type="text" class="form-control" id="inputCity"
+              formControlName="gouvernorat"
+                required [ngClass]="{ 'is-invalid': ff.gouvernorat.errors }">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-3">
+              <label class="labels">Zip</label>
+              <input type="text" class="form-control"
+              formControlName="code_postale"
+              required [ngClass]="{ 'is-invalid': ff.code_postale.errors }">
+          </div>
+            <div class="form-group col-md-3">
+              <label class="labels">Numéro de téléphone</label>
+              <input type="text" class="form-control "
+              formControlName="num_tel"
+              required [ngClass]="{ 'is-invalid': ff.num_tel.errors }">
+          </div>     
+              <div class="form-group col-md-3">
+                <label class="labels">CIN</label>
+                <input type="text" class="form-control"
+                formControlName="cin"
+                required [ngClass]="{ 'is-invalid': ff.cin.errors }">
+              </div>
+            </div>
+              <div class="form-row">
+              <div class="form-group col-md-3">
+                <label class="labels">Date de naissance</label>
+                <input type="text"
+        class="form-control"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true }"
+        formControlName="date_de_naissance"
+        required [ngClass]="{ 'is-invalid': ff.date_de_naissance.errors }">
+          </div>
+          
+              
+          </div>
+        </form>
+        <div class="text-center" style="margin-top: 30px;">
+          <button  class="btn" style="background-color:#00C794;color:white;" matStepperPrevious>
+            <mat-icon>keyboard_arrow_left</mat-icon>
+          </button>
+          <button    class="btn btn-lg" style="background-color:#00C794;color:white;margin-left:20px;" (click)="second()" matStepperNext> Finaliser </button>
+        </div>
+    </mat-step>
+
+
+
+
+   
+   
+  </mat-horizontal-stepper>
+  

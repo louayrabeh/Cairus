@@ -1,0 +1,25 @@
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Nom</label>
+        <input type="text" class="form-control"value="{{data.Nom}}">
+      </div>
+    </div>
+
+    
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Prix</label>
+        <input type="text" class="form-control"value="{{data.Prix}} DT" >
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1" style="resize: none;">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" value="{{data.Description}}"></textarea>
+      </div>
+      <div class="text-center">
+    <button type="submit" class="btn btn-primary" (click)="Pack3Succes()" [mat-dialog-close]="true">Enregistrer</button>
+  </div> 
+  </form>
+

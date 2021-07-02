@@ -1,0 +1,69 @@
+<div class="header" >
+    <img src="/assets/images/logoStepper.png" alt="LogoStepper" class="logo" routerLink='/landingPage'>
+    <div style="display: flex;
+    flex-direction: row;
+    
+    min-width: 160px;">
+        <i class="bi bi-telephone"></i>
+    
+    <div>
+        <p>Appel gratuit</p>
+        <div class="num">+216 55 555 555</div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="height: 800px;">
+    <div class="row justify-content-center">
+        <div class="col-md-9 col-lg-12 col-xl-10 mt-5">
+            <div class="card shadow-lg o-hidden border-0 my-5 " style="padding-bottom: 30px !important;">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-flex">
+                            <div class="flex-grow-1 bg-login-image" style="background-image: url('./assets/images/log2.png');"></div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h3 class="text-dark mb-4" style="color: #29303b;
+                                    text-align: center;
+                                    line-height: 1 !important;
+                                    font-weight: 700 !important;
+                                    font-size: 18px;
+                                   ">Content de vous revoir!</h3>
+                                </div>
+                                <form class="user" style="margin-left: 20px;" [formGroup]="LoginForm" (ngSubmit)="login(LoginForm.value)">
+                                    <div class="form-group" style="width: 400px !important;">
+                                        <label style="color:rgb(90, 90, 83)" >Adresse email</label>
+                                        <input formControlName="email" class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" name="email" >
+                                        <span class="text-danger"*ngIf="email?.invalid && email?.touched">
+                                            Adresse email invalide
+                                        </span>
+                                    </div>
+                                    <div class="form-group" style="width: 420px !important;">
+                             <label style="color:rgb(90, 90, 83)">Mot de passe</label>
+                            <p-password  style="width:200px !important" [toggleMask]="true" formControlName="mdp" [feedback]="false" ></p-password>
+                            <span class="text-danger" *ngIf="mdp?.invalid && mdp?.touched">
+                                Mot de passe manquant
+                            </span>
+                
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1" /><label class="form-check-label custom-control-label" for="formCheck-1">Se souvenir de moi</label></div>
+                                        </div>
+                                    </div>
+                                    <button style="margin-left: 17px;width: 100% !important;" class="btn btn-primary btn-block text-white btn-user" routerLink="/navigation" type="submit" [disabled]="LoginForm.invalid">Login</button>
+                                    <hr style="margin-left: 28px !important; background-color: lightblue !important;"/>
+                                </form>
+                             
+                                <div style="margin-left: 175px!important;" ><a class="small" routerLink="/Inscription" > <u>Ouvrez un compte!</u> </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

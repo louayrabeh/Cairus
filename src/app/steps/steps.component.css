@@ -1,0 +1,184 @@
+.rounded-lg {
+    border-radius: 1rem !important;
+  }
+  
+  .text-small {
+    font-size: 0.9rem !important;
+  }
+  
+  .custom-separator {
+    width: 5rem;
+    height: 6px;
+    border-radius: 1rem;
+  }
+  
+  .text-uppercase {
+    letter-spacing: 0.2em;
+  }
+  
+  
+  @media (min-width: 992px) {
+    .priceCards .oussa:hover {
+      margin-top: -.25rem;
+      margin-bottom: .25rem;
+      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    }
+    .pricing .card:hover .btn {
+      opacity: 1;
+    }
+  }
+  .labels{
+    color:rgb(119, 122, 144);
+    display: inline-block;
+    font: 14px / 16px ;
+    margin-bottom: 6px;
+  }
+
+input,select{
+  border: 1px solid #E5F5FF !important;
+  height: 48px !important;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red!important;
+}
+.oussa{
+  background: #cbe5eb;
+}
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #E3F2FD!important;
+  color:black!important;
+}
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #e2e4e6;
+  color:black;
+}
+.header{  
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  padding: 19px 27px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 10px 0px;
+  position: relative;
+  
+}
+.logo{
+  height:60px;
+  width:10%;
+}
+.nom{
+  line-height: 28px;
+  font-size: 16px;
+  margin-bottom: 0px;
+  color: rgb(21, 118, 225);
+}
+#pricing .pricing-table {
+  padding: 55px;
+  border: 1px solid #ccc;
+  -moz-transition: all .8s ease;
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease; 
+margin-bottom:10px;}
+  #pricing .pricing-table h3 {
+    font-size: 20px;
+    color: #151948;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 11px; }
+  #pricing .pricing-table h1 {
+    color: #47b2e4;
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 10px; }
+  #pricing .pricing-table h1 span {
+    font-size: 16px;
+    position: absolute;
+    left: 20%;
+    top: 10px; }
+  #pricing .pricing-table ul {
+    padding-bottom: 28px; }
+  #pricing .pricing-table ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #5e629c;
+    display: block;
+    line-height: 33px; }
+  #pricing .pricing-table:hover {
+    border: 1px solid #47b2e4;
+    box-shadow: 0px 0px 25px 0px rgba(95, 95, 95, 0.24);
+    -moz-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease; }
+    .btn-common {
+      background-color: #47b2e4;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+      width: 160px;
+      height: 50px;
+      padding: 14px 15px;
+  color:white; }
+      .btn-border {
+          border-style: solid;
+          border-width: 1px;
+          cursor: pointer;
+          background-color: transparent;
+          border-color: #47b2e4;
+          color: #47b2e4;
+          width: 160px;
+          height: 50px;
+          padding: 14px 15px; }
+
+          .pricing ul {
+            padding: 20px 0;
+            list-style: none;
+            color: #999;
+            text-align: left;
+            line-height: 20px;
+          }
+          
+          .pricing ul li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+          }
+          
+          .pricing ul i {
+            color: #47b2e4;
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+          }
+          
+          .pricing ul .na {
+            color: #ccc;
+          }
+          
+          .pricing ul .na i {
+            color: #ccc;
+          }
+          
+          .pricing ul .na span {
+            text-decoration: line-through;
+          }
+
+          @keyframes p-progress-spinner-color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}

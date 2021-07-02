@@ -1,0 +1,48 @@
+<form   >
+<div class="row">
+    <div class="form-group col">
+    <label for="inputPassword4">Mot de passe</label>
+    <div class="input-group">
+    <input [type]="show ? 'text' : 'password'" type="password" class="form-control" id="inputPassword4"value="{{shell.mdp}}" style="color: #7b7e80;">
+    <div class="input-group-append">
+      <span class="input-group-text">
+        <i (click)="password()" class="fa fa-eye-slash"></i>
+      </span>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="form-group col">
+  <label for="inputPassword4">Nouveau Mot de passe</label>
+  <div class="input-group">
+  <input [type]="show ? 'text' : 'password'" type="password" class="form-control" id="inputPassword4"  formControlName="mdp"placeholder="Nouveau Mot de passe">
+  <div class="input-group-append">
+    <span class="input-group-text">
+      <i (click)="password()" class="fa fa-eye-slash" ></i>
+    </span>
+ </div>
+ </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col">
+  <label for="inputPassword4">Confirmer Mot de passe</label>
+  <div class="input-group">
+  <input type="password" [type]="show ? 'text' : 'password'" class="form-control" id="inputPassword4" placeholder="Confirmer Mot de passe">
+  <div class="input-group-append">
+    <span class="input-group-text">
+      <i (click)="password()" class="fa fa-eye-slash"></i>
+    </span>
+  </div>
+ </div>
+  </div>
+</div>
+
+<div class=text-center>
+  <button type="submit" class="btn btn-primary"  [mat-dialog-close]="true" id="enregister">Modifier</button>
+</div>
+</form>

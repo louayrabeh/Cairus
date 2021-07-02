@@ -1,0 +1,35 @@
+<form>
+
+  <div class="form-row">
+          <div class="form-group col-md-10">
+            <label for="formGroupExampleInput">Titre</label>
+            <input type="text" class="form-control"placeholder="Titre">
+            
+          </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-10 form-group" >
+      <label for="formGroupExampleInput">Date d'évènement</label>
+      
+        <input type="text"
+        placeholder="Date d'évènement"
+        class="form-control"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true }">  
+    </div>   
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-10">
+      <label for="formGroupExampleInput">Description</label>
+      <textarea class="form-control"  rows="5" placeholder="Description"></textarea>
+      
+      
+    </div>
+  </div>
+  <div class="text-center">
+  <button type="submit" class="btn btn-primary" (click)="ajoutSucces()">Enregistrer</button>
+</div>
+</form>

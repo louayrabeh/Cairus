@@ -1,0 +1,93 @@
+
+<div class="container">
+    <div class="row" style="height:300px;">
+      <div class="col">
+      <h2>Profil</h2>
+      <h3>Ahmed Gharbi</h3>
+  <circle-progress
+  [percent]="85"
+  [radius]="45"
+  [innerStrokeWidth]="0"
+  [outerStrokeWidth]="3"
+  [outerStrokeColor]="'#2dcfb3'"
+  [animation]="true"
+  [animationDuration]="600"
+></circle-progress>
+
+    <p style="position: relative;left:110px;bottom:60px;color:#5278e1;font-size: 22px;font-weight: bold;" >3</p>
+    <h3 style="position: relative;left:124px;bottom:95px;color:#7b7e80;font-size:15px;">/5 étapes validées</h3>
+    <a href="www.google.com" style="position: relative;left:110px;bottom:100px;color:#7b7e80;font-size:15px;text-decoration: underline;">Compléter mon profil</a>
+    </div>
+
+    <div class="col-9">
+      <h2>Mes nouveaux courriers</h2>
+      
+        <button routerLink="/Courriers" class="btn btn-primary" style="margin-left:670px;height: 35px;"><p style="font-size:13px;">Voir tous mes courriers</p></button>
+      
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" class="tablee">
+      <!-- Id Column -->
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th">Id</th>
+        <td mat-cell *matCellDef="let element" class="td-id"> {{element.Id}} </td>
+      </ng-container>
+        
+        <!-- Date Column -->
+        <ng-container matColumnDef="DateRec">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th">Date de reception</th>
+          <td mat-cell *matCellDef="let element" class="td-Date"> {{element.DateRec}} </td>
+        </ng-container>
+      
+        <!-- Categorie Column -->
+        <ng-container matColumnDef="Categorie">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header id="" class="th" >catégorie</th>
+          <td mat-cell *matCellDef="let element" class="td-type"> {{element.Categorie}} </td>
+        </ng-container>
+        
+  
+      
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+      
+      </table>
+    </div>
+  </div>
+
+  <div class="row" style="height:250px;">
+    <div class="col-4">
+      <h2>Mes services</h2>
+      <button  mat-stroked-button style="background-color: Transparent;margin-top:10px;margin-right:10px;color:#747678;"><img src="/assets/images/reunion.PNG"style="height:100px;width:100px;" ><br>Salles de<br> reunions</button>
+      <button  mat-stroked-button style="background-color: Transparent;margin-top:10px; color:#747678;"><img src="/assets/images/tel.PNG" style="height:100px;width:100px;" /><br>Secrétariat<br>téléphonique</button>
+    </div>
+    
+      
+      <div class="col-2">
+        <h2>Mon abonnement</h2>
+        <img src="/assets/images/Capture.PNG" alt="abon" style="height:110px;">
+        <div style="background-color: #e4f6ff;color:#1576e1;text-align:center;width:110px;font-size:12px;font-weight:bold;margin-left:40px;">Pack Actuel</div>
+        <div style="color:#7b7e80;margin-left:40px;margin-top:30px;">
+          <mat-icon style="font-size:17px;">business</mat-icon>
+          <span style="font-family:sans-serif;font-size:13px;">Pack Domi</span><br>
+          <span style="font-family:sans-serif;font-size:12px;margin-left:27px;">200dt/mois</span>
+          <button class="btn" style="height: 35px;color:#66696b;border-color: #dddddd;margin-top:35px;position:absolute;left:15px;width:175px;border-width:2px ;"><p style="font-size:13px;">Découvrez d'autres offres</p></button></div>
+          <mat-divider [vertical]="true" style="background-color:black;"></mat-divider>
+      </div>
+      
+      <div class="col-3">
+        <h2>Mes factures</h2> 
+        <table class="table" style="margin-top:40px;">
+          <tbody>
+            <tr>
+              <td style="color:#66696b">Option courrier</td>
+              <td style="color:#66696b">30 DT</td>
+              <td><button mat-icon-button class="btn" (click)="download()" ><mat-icon style="font-size:22px;color:#66696b;margin-bottom: 24px;">picture_as_pdf</mat-icon></button></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn" style="height:35px;color:#66696b;border-color: #dddddd;margin-top:10px;margin-left:40px;border-width:2px ;" ><p style="font-size:13px;">Voir toutes mes factures</p></button>
+
+      </div>
+    </div>
+   
+</div>

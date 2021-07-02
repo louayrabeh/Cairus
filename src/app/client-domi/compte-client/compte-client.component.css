@@ -1,0 +1,17 @@
+.profile-element {
+    font-family: Open Sans,sans-serif;
+    font-size: 13px;
+    padding: 24px 0;
+    border-bottom: 1px solid #ddd;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;}
+.cadre-profil {
+        padding: 40px;
+    }
+*:focus {
+        outline: none;
+    }

@@ -1,0 +1,86 @@
+h2{
+    font-family: "Publico Roman";
+    line-height: 36px;
+    font-size: 26px;
+    margin-bottom: 0px;
+}
+
+h3{
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: rgb(21, 118, 225);
+}
+.header{  
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    padding: 19px 27px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 10px 0px;
+    position: relative;
+    
+  }
+.divider{width: 35px;
+height: 2px;
+background-color: rgb(21, 118, 225);
+margin-top: 23px;
+margin-bottom: 30px;
+  
+  }
+.Commencer{
+    line-height: 28px;
+color: rgb(40, 44, 46);
+font-weight: 500;
+font-size: 16px;
+padding: 14px 0px 27px;
+}
+.btn{
+    border-radius: 5px;
+    border: 1px solid rgb(215, 215, 215);
+    -moz-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    outline: currentcolor none medium;
+    color: rgb(123, 126, 128);
+    padding: 18px;
+    transition: all 100ms ease 0s;
+    cursor: pointer;
+    position: relative;
+    height:180px;
+    width:250px;
+    align-items: center!important;
+justify-content: center!important;
+box-sizing: border-box;
+}
+.btn:hover{
+    border-width: 2px;
+border-color: rgb(21, 118, 225);
+color: rgb(21, 118, 225);
+transform: translateY(-10px);
+padding: 17px;
+z-index: 10;
+}
+.titre{
+    font-weight: bold;
+font-size: 16px;
+line-height: 16px;
+vertical-align: middle;
+color: inherit;
+
+}
+
+.logo{
+    height:60px;
+    width:10%;
+}
+.nom{
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: rgb(21, 118, 225);
+}

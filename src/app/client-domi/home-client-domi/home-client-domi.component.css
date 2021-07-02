@@ -1,0 +1,41 @@
+.tablee {
+    width: 90%;
+    background-color: #fff8fa;
+}  
+.td-id{
+ width:40px;
+}
+.td-nom{
+  width:40px;
+}
+.td-prenom{
+  width:40px;
+}
+.td-Montant{
+  width:30px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.td-Date{
+  width:40px;
+}
+.td-type{
+  width:40px;
+ 
+}
+
+.td-actions{
+  width:40px;
+  position:relative;
+  right:30px;
+}
+
+.rechercher{
+  width: 90%;
+  background: linear-gradient(#c3cfe2, #f5f7fa);
+}
+
+.th{
+  font-weight: bold;
+}
+

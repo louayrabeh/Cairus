@@ -1,0 +1,75 @@
+
+<div style="overflow:hidden;">
+  <mat-sidenav-container class="sidenav-container">
+    
+    <mat-sidenav #drawer class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)" >
+        
+          <div class="text-center">
+            <img class="ProfImg" src="https://www.w3schools.com/howto/img_avatar.png" alt="Bassma Yaacoubi">    
+          </div>    
+        
+      <div class="navList">
+        <mat-nav-list>
+          
+        <a mat-list-item routerLink='/devis'>
+          <i class="bi bi-grid iconNav"></i>
+          <p class="text-nav">Devis</p></a>
+        <a mat-list-item routerLink='/faq'>
+          <i class="bi bi-people iconNav"></i>
+          <p class="text-nav">FAQ</p></a>
+    
+      </mat-nav-list>
+    </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content style="height:1500px;overflow: hidden;">
+      <mat-toolbar class="header" >
+        <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon" style="color:#b3b4b4;">menu</mat-icon>
+      </button>
+        <img alt="" src="./assets/images/logo.png" style="width:7%;height:42%;margin-left:10px;">
+        <span class="example-spacer"></span>
+        <div class="icons">
+                
+                 <button mat-icon-button>
+                   <mat-icon class="top-icons">settings</mat-icon>
+                 </button>
+             
+                 <button mat-button [matMenuTriggerFor]="menu">
+                     <mat-icon class="top-icons">person</mat-icon>
+                     
+                 </button>
+      
+                 <mat-menu #menu="matMenu">
+                     <button mat-menu-item>
+                         <mat-icon>exit_to_app</mat-icon>
+                         Sign out
+                     </button>
+                     <button mat-menu-item>
+                         <mat-icon>history</mat-icon>
+                         Historique
+                     </button>
+                 </mat-menu>
+          
+       </div>
+      </mat-toolbar>
+      
+      
+     
+      <router-outlet> </router-outlet>
+  
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  
+  
+  </div> 

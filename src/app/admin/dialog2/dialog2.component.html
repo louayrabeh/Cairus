@@ -1,0 +1,100 @@
+
+<form [formGroup]="registerForm" (ngSubmit)="addbutton(registerForm.value)">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="formGroupExampleInput">Nom</label>
+      <input type="text" class="form-control"placeholder="Nom" formControlName="nom" required [ngClass]="{ 'is-invalid': f.nom.errors }">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="formGroupExampleInput">Prenom</label>
+      <input type="text" class="form-control" placeholder="Prenom " formControlName="prenom" required [ngClass]="{ 'is-invalid': f.prenom.errors }">
+    </div>
+  </div>
+
+  
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email" required [ngClass]="{ 'is-invalid': f.email.errors }">
+    
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Mot de passe</label>
+        <input type="password" class="form-control" required [ngClass]="{ 'is-invalid': f.mdp.errors }" placeholder="Password" formControlName="mdp">
+      
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">CIN</label>
+        <input type="text" class="form-control"
+        placeholder="CIN"
+         formControlName="cin"
+         required [ngClass]="{ 'is-invalid': f.cin.errors }">
+      
+      </div>
+      
+      <div class="form-group col-md-6">
+        <label for="DateOfBirth">Date de naissance</label>
+        <input type="text"
+        placeholder="Date de naissance"
+        class="form-control"
+        bsDatepicker
+        [bsConfig]="{ isAnimated: true }"
+        name="dp"
+        formControlName='date_de_naissance'
+        required [ngClass]="{ 'is-invalid': f.date_de_naissance.errors }">
+       
+  </div>
+  
+      
+  </div>
+    
+
+  <div class="form-group">
+    <label for="inputAddress2">Adresse</label>
+    <input
+    required [ngClass]="{ 'is-invalid': f.adresse.errors }"
+     type="text" class="form-control" id="inputAddress" placeholder="Numéro,Adresse, Rue" formControlName="adresse">
+   
+  </div>
+
+  
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Ville</label>
+      <input type="text"
+      required [ngClass]="{ 'is-invalid': f.ville.errors }" class="form-control" id="inputCity" placeholder="Ville" formControlName="ville">
+      
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Gouvernorat</label>
+      <input 
+      required [ngClass]="{ 'is-invalid': f.gouvernorat.errors }"
+      type="text" class="form-control" id="inputCity" placeholder="Gouvernorat" formControlName="gouvernorat">
+    
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" 
+      required [ngClass]="{ 'is-invalid': f.code_postale.errors }"
+       formControlName="code_postale" placeholder="Zip">
+     
+    </div>
+  </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Numéro de téléphone</label>
+        <input type="text" class="form-control "placeholder="Num.Téléphone"
+        required [ngClass]="{ 'is-invalid': f.num_tel.errors }"
+         formControlName="num_tel">
+       
+      </div>
+  
+    </div>
+<div class="text-center">
+  <button type="submit"  class="btn btn-primary" >Enregistrer</button>
+</div>   
+</form>

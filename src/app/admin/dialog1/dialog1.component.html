@@ -1,0 +1,77 @@
+
+
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Nom</label>
+        <input type="text" class="form-control"placeholder="{{data.nom}}" readonly>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="formGroupExampleInput">Prenom</label>
+        <input type="text" class="form-control" placeholder="{{data.prenom}} " readonly>
+      </div>
+    </div>
+
+    
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="{{data.email}}" readonly>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Mot de passe</label>
+          <input type="text" class="form-control" placeholder="{{data.mdp}}" readonly>
+        </div>
+        
+    </div>
+
+      
+
+    <div class="form-group">
+      <label for="inputAddress2">Adresse</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="{{data.adresse}}" readonly>
+    </div>
+
+    
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Ville</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="{{data.ville}}" readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Gouvernorat</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="{{data.gouvernorat}}" readonly>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Code Postal</label>
+        <input type="text" class="form-control" id="inputZip" placeholder="{{data.code_postale}}" readonly>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput">CIN</label>
+          <input type="text" class="form-control"placeholder="{{data.cin}}" readonly>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput">Date de naissance</label>
+          <input type="text" class="form-control"placeholder="{{data.date_de_naissance}}"readonly>
+        </div>        
+    </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput">Numéro de téléphone</label>
+          <input type="text" class="form-control "placeholder="{{data.num_tel}}" readonly>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput">Type d'abonnement</label>
+          <input type="text" class="form-control "placeholder="{{data.type}}" readonly>
+        </div>
+    
+      </div>
+      
+    <button [mat-dialog-close]="true" class="btn btn-primary" style="position: relative;left:260px;">Close</button>
+     
+  </form>

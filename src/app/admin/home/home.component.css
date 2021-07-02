@@ -1,0 +1,108 @@
+.card1{
+  background:linear-gradient(#24beb8,#42e695);
+  border-radius:5px;
+  margin-right: 10px;
+  margin-left: 40px!important;
+  height: 180px;
+  margin-bottom:20px;
+
+}
+
+.card2{
+  background:linear-gradient(#9b56ff,#e16bda);
+  border-radius:5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 180px;margin-bottom:20px;
+
+}
+
+
+.card3{
+  background:linear-gradient(#f48664,#fda140);
+  border-radius:5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 180px;
+  margin-bottom:20px;
+
+}
+
+.card4{
+  background:linear-gradient(#299cf5,#82c0ed);
+  border-radius:5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 180px;
+  margin-bottom:20px;
+}
+
+.card-icon{
+  color:white;
+  font-size:60px;
+}
+.card-content{
+  color:rgb(255, 253, 253);
+  font-size:16px;
+  margin-bottom:-20px!important;
+  margin-top:50px;
+  
+}
+
+.card-num{
+  color:white;
+  font-size:45px;
+  margin-left:200px;
+  margin-top:-45px;
+}
+
+.footer-icon{
+  color:white;
+  font-size:20px;
+}
+
+.card5{
+  height:290px;
+  width:350px;
+  border-radius:5px;
+margin-bottom:20px;
+}
+
+.card6{
+  height:290px;
+  width:350px;
+  border-radius:5px;
+  margin-bottom:20px;
+  
+}
+
+
+.card7{
+  border-radius:5px;
+  margin-bottom:20px;
+  margin-left: 38px!important;
+}
+
+
+.card8{
+  height:290px;
+  width:350px;
+  border-radius:5px;
+  margin-bottom:20px;
+  margin-left: 100px!important;
+  padding-right:5px;
+
+}
+
+.card9{
+  height:290px;
+  width:355px !important;
+  border-radius:5px;
+  margin-bottom:30px;
+}
+
+.title{
+  color:#a7a0ac;
+  font-size:15px;
+  font-weight: bold;
+}

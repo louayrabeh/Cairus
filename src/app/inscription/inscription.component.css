@@ -1,0 +1,45 @@
+.logo{
+    height:60px;
+    width:10%;
+  }
+  .header{  
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    padding: 19px 27px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 10px 0px;
+    position: relative;
+    
+  }
+i{
+    stroke: rgb(21, 118, 225);
+display: flex;
+-moz-box-align: center;
+align-items: center;
+-moz-box-pack: center;
+justify-content: center;
+height: 36px;
+width: 36px;
+position: relative;
+border-radius: 50%;
+border: 1px solid rgb(21, 118, 225);
+margin-right: 15px;
+color:rgb(21, 118, 225);
+}
+p{
+    color: rgb(40, 44, 46);
+font-size: 11px;
+line-height: 15px;
+font-family: "Open Sans";
+margin-bottom: 0px;
+}
+.num{
+    font-variant: tabular-nums;
+line-height: 1.5;
+font-feature-settings: "tnum","tnum";
+font-weight: bold;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+table {
+    width: 100%;
+    border: 2px solid #e9ecef;
+}  
+
+.flexrow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+.btn{
+  margin-left:100px!important;
+  margin-top:50px;
+  background:  #1e293b;
+  border-radius: 30px;
+  color:white;
+  margin-bottom:6px;
+}
+.flex-wrap {
+  margin-right: 20px;
+  display: flex!important;
+  align-items: flex-end!important;
+  justify-content: flex-end!important;
+  flex-wrap: wrap!important;
+  column-gap: 25px!important;
+}
+.delete-button{
+  background:#ff944f;
+  border-radius: 50%;
+  margin-left:20px;
+ 
+}
+.delete-icon{
+ 
+  color:white;
+  font-size: 15px;
+}
+.detail-button{
+  background:#8d8d8d;
+  border-radius: 50%;
+  margin-left:60px;
+
+}
+.detail-icon{
+  align-self: flex-end!important;
+  color:white;
+  font-size: 15px;
+}
+
+.search-input{
+  position: relative;
+  padding: 4px 10px 5px 40px;
+  color: rgb(70, 69, 69);
+  background-color: rgba(240, 231, 231, 0.89);
+  border: 0px;
+  bottom: 17px;
+
+}
+.row{
+ background:
+ #dfe3e7;
+ Width: 84.3%;
+ height:9%;
+ margin-left:100px;
+}
+.spann{
+  vertical-align: middle;
+  margin-left: .5rem!important;
+  font-size:14px;
+  font-family: 'Inter', sans-serif;
+}
+td{
+  vertical-align: middle;
+
+}
+th{
+  vertical-align: middle;
+  font-size:15px;
+}
+.magnifying-glass {
+  width:4%;
+  display: flex!important;
+  top: 8px;
+  color: rgba(0, 0, 0, 0.89);
+  position: relative;
+  z-index: 10;
+  left : 330px;
+
+
+}
+@media screen and (max-width: 500px) {
+  span {
+    font-size: 6px !important;
+    line-height: 80%;
+  }}
+
